@@ -22,9 +22,9 @@ public class CollegeAdmnistration implements Serializable {
     @Column(name = "quantity_professors", nullable = false)
     private Integer QuantitysOfProfessors;
     @Enumerated(EnumType.STRING)
-    private AvailableCoursesAtUnilago availableCourses;
+    private AvailableCourses availableCourses;
 
-    public void setAvailableCourses(AvailableCoursesAtUnilago availableCourses) {
+    public void setAvailableCourses(AvailableCourses availableCourses) {
         this.availableCourses = availableCourses;
     }
 

@@ -3,11 +3,12 @@ package com.application.admnistration.entity.entities;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@AllArgsConstructor
+
+@NoArgsConstructor
 @Getter
-@Setter
 @Entity
 @Table(name = "student")
 public class StudentAdmnistration {
@@ -26,4 +27,28 @@ public class StudentAdmnistration {
     private Long cpfStudent;
     @Column(name = "rg_student", nullable = false, unique = true)
     private Long rgStudent;
+
+    public void setAgeStudent(Integer ageStudent) {
+        this.ageStudent = ageStudent;
+    }
+
+    public void setCpfStudent(Long cpfStudent) {
+        this.cpfStudent = cpfStudent;
+    }
+
+    public void setEmailStudent(String emailStudent) {
+        this.emailStudent = emailStudent;
+    }
+
+    public void setHeightStudent(Double heightStudent) {
+        this.heightStudent = heightStudent;
+    }
+
+    public void setNameStudent(String nameStudent) {
+        this.nameStudent = nameStudent;
+    }
+
+    public void setRgStudent(Long rgStudent) {
+        this.rgStudent = rgStudent;
+    }
 }

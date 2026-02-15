@@ -1,6 +1,6 @@
 package com.application.admnistration.entity.entities;
 
-import com.application.admnistration.entity.AvailableCoursesAtUnilago;
+import com.application.admnistration.entity.AvailableCourses;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -28,5 +28,5 @@ public class ProfessorAdmnistration {
     @Column(name = "rg_professor", nullable = false, unique = true)
     private Long rgProfessor;
     @Enumerated(EnumType.STRING)
-    private final AvailableCoursesAtUnilago availableCoursesAtUnilago;
+    private final AvailableCourses availableCourses;
 }

@@ -1,6 +1,6 @@
 package com.application.admnistration.entity;
 
-public enum AvailableCoursesAtUnilago {
+public enum AvailableCourses {
     // Computer Science
     DATA_STRUCTURES,
     ALGORITHMS,
