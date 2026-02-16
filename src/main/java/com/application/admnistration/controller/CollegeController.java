@@ -1,7 +1,7 @@
 package com.application.admnistration.controller;
 
 import com.application.admnistration.entity.CollegeAdmnistration;
-import com.application.admnistration.service.CollegeAdmService;
+import com.application.admnistration.service.CollegeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,14 +13,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/collegeAdm")
 @RequiredArgsConstructor
 public class CollegeAdmController {
-   private final CollegeAdmService collegeAdmService;
+   private final CollegeService collegeService;
 
     @PutMapping(
             value = "/refresh",
             produces = MediaType.APPLICATION_JSON_VALUE
     )
     public CollegeAdmnistration updateQuantities(){
-        return collegeAdmService.updateQuantities();
+        return collegeService.updateQuantities();
     }
 
     @GetMapping(
@@ -28,6 +28,6 @@ public class CollegeAdmController {
             produces = MediaType.APPLICATION_JSON_VALUE
     )
     public CollegeAdmnistration getCollegeAdmnistrationInformation(){
-        return collegeAdmService.getCollegeAdmnistrationInformation();
+        return collegeService.getCollegeAdmnistrationInformation();
     }
 }

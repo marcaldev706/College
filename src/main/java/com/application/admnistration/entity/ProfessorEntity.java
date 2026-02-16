@@ -4,14 +4,12 @@ import com.application.admnistration.entity.AvailableCourses;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.Setter;
 
 @AllArgsConstructor
 @Getter
-@Setter
 @Entity
 @Table(name = "professor")
-public class ProfessorAdmnistration {
+public class ProfessorEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idProfessor;
@@ -29,4 +27,28 @@ public class ProfessorAdmnistration {
     private Long rgProfessor;
     @Enumerated(EnumType.STRING)
     private final AvailableCourses availableCourses;
+
+    public void setRgProfessor(Long rgProfessor) {
+        this.rgProfessor = rgProfessor;
+    }
+
+    public void setNameProfessor(String nameProfessor) {
+        this.nameProfessor = nameProfessor;
+    }
+
+    public void setHeightProfessor(Double heightProfessor) {
+        this.heightProfessor = heightProfessor;
+    }
+
+    public void setEmailProfessor(String emailProfessor) {
+        this.emailProfessor = emailProfessor;
+    }
+
+    public void setCpfProfessor(Long cpfProfessor) {
+        this.cpfProfessor = cpfProfessor;
+    }
+
+    public void setAgeProfessor(Integer ageProfessor) {
+        this.ageProfessor = ageProfessor;
+    }
 }
